@@ -9,15 +9,16 @@ module.exports = function () {
       .on('error', $.gp.notify.onError({
         title: 'Style'
       }))
-      .pipe($.gp.autoprefixer({
-        browsers: [
-          'last 3 version',
-          '> 1%',
-          'ie 8',
-          'ie 9',
-          'Opera 12.1'
-        ]
-      }))
+      .pipe($.gp.postcss($.PATH.postPlugins))
+      // .pipe($.gp.autoprefixer({
+      //   browsers: [
+      //     'last 3 version',
+      //     '> 1%',
+      //     'ie 8',
+      //     'ie 9',
+      //     'Opera 12.1'
+      //   ]
+      // }))
       .pipe($.gp.if(CONST.PRODUCTION, $.gp.csso({
         restructure: false,
         sourceMap: false,
