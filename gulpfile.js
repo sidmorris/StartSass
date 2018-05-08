@@ -9,7 +9,8 @@ global.$ = {
   gp: require('gulp-load-plugins')(),
   argv : require('yargs').argv,
   PATH: require('./gulp/config/path.js')
-};
+  
+  };
 //
 // CONFIG
 //

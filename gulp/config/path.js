@@ -1,5 +1,16 @@
 module.exports = {
-	SASS: ['node_modules/bootstrap/scss'],
+	postPlugins: [
+		// require('precss'),
+		require('postcss-cssnext'),
+		require('postcss-short'),
+		require('postcss-easing-gradients'),
+		require("css-mqpacker")({
+			sort: true
+		})
+	],
+	SASS: [
+		// 'node_modules/bootstrap/scss'
+	],
 	JS: [
 		//	JQUERY
 		'node_modules/jquery/dist/jquery.js'
