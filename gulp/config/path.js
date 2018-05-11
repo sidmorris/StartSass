@@ -9,7 +9,7 @@ module.exports = {
 		})
 	],
 	SASS: [
-		// 'node_modules/bootstrap/scss'
+		'node_modules/bootstrap/scss'
 	],
 	JS: [
 		//	JQUERY
